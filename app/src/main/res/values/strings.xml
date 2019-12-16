@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">onlineWaiter</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="explore">Explore</string>
+    <string name="my_orders">My orders</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="favorites">Favorites</string>
+    <string name="profile">Profile</string>
+    <string name="toolbar_restaurants">Restaurants</string>
+</resources>

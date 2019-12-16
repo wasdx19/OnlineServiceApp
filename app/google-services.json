@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "313406833739",
+    "firebase_url": "https://kazirmazir.firebaseio.com",
+    "project_id": "kazirmazir",
+    "storage_bucket": "kazirmazir.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313406833739:android:2eeefee68a59ace4b8f9ce",
+        "android_client_info": {
+          "package_name": "com.example.onlinewaiter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313406833739-tge4dbg3sdq3j3fob4fc8qv8vj7uqaii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onlinewaiter",
+            "certificate_hash": "ae73f4baac6290b1c3188bad8339a513b78c1868"
+          }
+        },
+        {
+          "client_id": "313406833739-nqqnjhqspbs82rfen4vrgbm8g15b8v7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyMeTsxLu9wwKuAZ7eLG9O1XVx8fmQoII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313406833739-nqqnjhqspbs82rfen4vrgbm8g15b8v7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
