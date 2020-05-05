@@ -5,10 +5,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground">
+        android:background="@color/mainAppColor">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
+            android:id="@+id/recycler1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/list_item_recycler" />

@@ -5,9 +5,10 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.onlinewaiter.data.model.restaurant.Restaurant;
+import com.example.onlinewaiter.data.model.restoModels.RestaurantModel;
 import com.example.onlinewaiter.R;
 import com.example.onlinewaiter.databinding.ListItemRecyclerBinding;
 
@@ -16,7 +17,13 @@ import java.util.List;
 
 public class RestourantsAdapter extends RecyclerView.Adapter<RestourantsAdapter.RestHolder> {
 
-    private final List<Restaurant> restList = new ArrayList<>();
+    private final List<RestaurantModel> restList = new ArrayList<>();
+    private RestaurantModel restaurant;
+    private ClickedListener clickedListener;
+
+    public RestourantsAdapter(ClickedListener clickedListener) {
+        this.clickedListener = clickedListener;
+    }
 
     @NonNull
     @Override
@@ -29,8 +36,15 @@ public class RestourantsAdapter extends RecyclerView.Adapter<RestourantsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull RestHolder restHolder, int i) {
-        Restaurant restaurant=restList.get(i);
+        restaurant = restList.get(i);
         restHolder.binding.setRests(restaurant);
+
+        restHolder.binding.cvRestCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickedListener.itemClicked(restaurant);
+            }
+        });
     }
 
     @Override
@@ -41,11 +55,10 @@ public class RestourantsAdapter extends RecyclerView.Adapter<RestourantsAdapter.
             return 0;
     }
 
-    public void addData(List<Restaurant> rests) {
+    public void addData(List<RestaurantModel> rests) {
         restList.addAll(rests);
         notifyDataSetChanged();
     }
-
 
     public class RestHolder extends RecyclerView.ViewHolder {
 
@@ -55,7 +68,9 @@ public class RestourantsAdapter extends RecyclerView.Adapter<RestourantsAdapter.
             super(binding.getRoot());
             this.binding = binding;
         }
+    }
 
-
+    public  interface ClickedListener{
+        public void itemClicked(RestaurantModel restaurantModel);
     }
 }

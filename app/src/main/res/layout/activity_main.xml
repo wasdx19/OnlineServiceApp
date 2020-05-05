@@ -15,7 +15,8 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="64dp">
+            android:layout_height="64dp"
+            android:background="@color/mainAppColor">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -29,8 +30,9 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:text="@string/toolbar_restaurants"
-                    android:textColor="@color/blackColor"
-                    android:textSize="24dp" />
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+                    android:textSize="24sp" />
 
             </RelativeLayout>
 
@@ -41,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/toolbar"
-            android:background="@color/colorBackground"
+            android:background="@color/mainAppColor"
             android:layout_above="@id/bottomNav"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -49,9 +51,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:background="@color/mainAppColor"
             app:itemIconTint="@drawable/navbar_item_color"
             app:itemTextColor="@drawable/navbar_item_color"
-            app:menu="@menu/navbar_menu" />
+            app:menu="@menu/navbar_menu"
+            android:visibility="visible"/>
 
     </RelativeLayout>
 </layout>

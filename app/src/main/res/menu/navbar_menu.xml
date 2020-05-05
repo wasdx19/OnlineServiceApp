@@ -5,10 +5,10 @@
         android:icon="@drawable/ic_stars"
         android:title="@string/explore"/>
 
-    <item
-        android:id="@+id/orders"
-        android:icon="@drawable/receipt_24px"
-        android:title="@string/my_orders"/>
+<!--    <item-->
+<!--        android:id="@+id/orders"-->
+<!--        android:icon="@drawable/receipt_24px"-->
+<!--        android:title="@string/my_orders"/>-->
 
     <item
         android:id="@+id/restaurants"

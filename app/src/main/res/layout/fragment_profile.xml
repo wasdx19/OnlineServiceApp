@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainAppColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_avatar"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            app:cardCornerRadius="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ellipse10"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Azhar Bokes"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/user_avatar"/>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_userName"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/explore_circle_background"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit profile"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Friends"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginLeft="24dp"
+            android:textColor="@color/textGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed Orders"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/textGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basket of orders"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/textGray"/>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/explore_circle_background"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Log out"
+                android:textSize="18sp"
+                android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

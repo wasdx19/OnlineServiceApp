@@ -3,9 +3,21 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
     <color name="colorBackground">#E9EAEF</color>
-    <color name="colorStatusbar">#BEBEC4</color>
     <color name="colorIcon">#626161</color>
     <color name="colorIconClick">#E09112</color>
     <color name="blackColor">#000000</color>
+
+    <color name="colorStatusbar">#ffffff</color>
+    <color name="bottom_nav_bar">#ffffff</color>
+    <color name="toolbar">#ffffff</color>
+
+    <color name="mainAppColor">#ffffff</color>
+    <color name="elementColor">#E09112</color>
+
+    <color name="textGray">#666666</color>
+    <color name="textOrange">#E09112</color>
+
+    <color name="circleColor">#174E52</color>
 </resources>

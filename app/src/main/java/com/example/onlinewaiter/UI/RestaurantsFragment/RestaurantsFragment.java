@@ -1,5 +1,6 @@
 package com.example.onlinewaiter.UI.RestaurantsFragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,12 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.onlinewaiter.R;
+import com.example.onlinewaiter.UI.RestourantActivity;
+import com.example.onlinewaiter.data.model.restoModels.RestaurantModel;
 import com.example.onlinewaiter.databinding.FragmentRestourantsBinding;
 import com.example.onlinewaiter.utils.adapters.RestourantsAdapter;
 
-public class RestaurantsFragment extends Fragment {
+public class RestaurantsFragment extends Fragment implements RestourantsAdapter.ClickedListener {
 
     private FragmentRestourantsBinding restourantsBinding;
     private RestaurantsFragmentViewModel restaurantsVM;
@@ -30,13 +33,11 @@ public class RestaurantsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         restourantsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_restourants, container, false);
-
         restaurantsVM = ViewModelProviders.of(this).get(RestaurantsFragmentViewModel.class);
 
-        restourantsBinding.recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        RestourantsAdapter restourantsAdapter = new RestourantsAdapter();
-        restourantsBinding.recycler.setAdapter(restourantsAdapter);
-
+        RestourantsAdapter restourantsAdapter = new RestourantsAdapter(this);
+        restourantsBinding.recycler1.setLayoutManager(new LinearLayoutManager(getActivity()));
+        restourantsBinding.recycler1.setAdapter(restourantsAdapter);
         restourantsAdapter.addData(restaurantsVM.getRestaurantList());
 
         return restourantsBinding.getRoot();
@@ -46,4 +47,10 @@ public class RestaurantsFragment extends Fragment {
         return new RestaurantsFragment();
     }
 
+    @Override
+    public void itemClicked(RestaurantModel restaurantModel) {
+        Intent intent = new Intent(getContext(), RestourantActivity.class);
+        intent.putExtra("data", restaurantModel);
+        startActivity(intent);
+    }
 }
